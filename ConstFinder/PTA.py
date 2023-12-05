@@ -20,9 +20,9 @@ def PTAFinder()->list:
         name2 = "PTA跨年挑战赛"
         ret = []
         if today.month == 5:
-            ret.append([name1,next520.isoformat(),LENGTH])
+            ret.append([name1,next520.isoformat() + "T00:00:00",LENGTH])
         if today.month == 12:
-            ret.append([name2,nextnewyear.isoformat(),LENGTH,""])
+            ret.append([name2,nextnewyear.isoformat() + "T00:00:00",LENGTH,""])
         return ret
     except:
         print("更新PTA数据时出现异常!")
